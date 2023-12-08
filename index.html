@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cultura Vial</title>
+	<link rel="stylesheet" href="./res/css/slider.css">
+	<link rel="stylesheet" href="./res/css/componentes.css">
+	<link rel="stylesheet" href="./res/css/modales.css">
+	<link rel="stylesheet" href="./res/css/inicio.css">
+	<link rel="stylesheet" href="./res/css/examen.css">
+	<link rel="stylesheet" href="./res/css/guia.css">
+	<link rel="stylesheet" href="./res/css/index.css">
+	<link rel="stylesheet" href="./res/css/normalize.css">
+	<link rel="stylesheet" href="./res/webfonts/uicons-regular-straight.css">
+</head>
+<body>
+	<!-- SLIDER -->
+	<section id="slider" class="slider active">
+		<article class="slider__screen" style="background-image: url(./res/img/slider-3.jpg);">
+			<div class="slider__info">
+				<h2 class="slider__info__titulo">Hola, bienvenido a Cultura Vial TECNM!</h2>
+				<p class="slider__info__leyenda">Una aplicación que facilita la obtención de la licencia de conducir a los jovenes universitarios del ITE</p>
+			</div>
+			<i class="fi fi-rs-arrow-right slider__flecha-indicadora"></i>
+		</article>
+		<article class="slider__screen" style="background-image: url(./res/img/slider-1.jpg);">
+			<div class="slider__info">
+				<h2 class="slider__info__titulo">Guia para la obtención de licencia de conducir</h2>
+				<p>Te proporcionamos una guia con toda la informacion necesaria para adquirir tu licencia de conducir</p>
+				<a href="#" class="slider__link-btn" onclick="tabNavigation(NAV_OPTIONS.guia)">Ir a la guia</a>
+			</div>			
+			<i class="fi fi-rs-arrow-right slider__flecha-indicadora"></i>
+		</article>
+		<article class="slider__screen" style="background-image: url(./res/img/slider-2.jpg);">
+			<div class="slider__info">
+				<h2 class="slider__info__titulo">Prueba de conducir</h2>
+				<p>Ademas de la guia, tambien te proporcionamos una prueba teorica que te ayuda a acelerar el proceso para la obtension de tu licencia de conducir</p>
+				<a href="#" class="slider__link-btn" onclick="tabNavigation(NAV_OPTIONS.examen)">Realizar la prueba</a>
+			</div>			
+			<div class="slider__container-input">
+				<label for="chb-recordar-slider" class="slider__checbox">
+					<input type="checkbox" id="chb-recordar-slider">
+					No volver a mostrar
+				</label>
+				<button id="btn-cerrar-slider">Siguiente <i class="fi fi-rs-angle-right"></i></button>
+			</div>
+		</article>
+	</section>
+	<main class="main">
+		<!-- NAV -->
+		<nav class="nav">
+			<button id="btn-examen" class="nav-button">
+				<i class="fi fi-rs-test nav-button__icono"></i>
+				Examen
+			</button>
+			<button id="btn-inicio" class="nav-button">
+				<i class="fi fi-rs-home nav-button__icono"></i>
+				Inicio
+			</button>
+			<button id="btn-guia" class="nav-button">
+				<i class="fi fi-rs-steering-wheel nav-button__icono"></i>
+				Guia
+			</button>
+		</nav>
+		<!-- TABS -->
+		<!-- INICIO -->
+		<section id="page-inicio" class="page active">
+			<header class="page-header">
+				<span class="page-header__titulo">Inicio</span>
+			</header>
+			<main class="page-main">
+				<img class="image" src="./res/img/carretera-de-noche.jpg" alt="">
+				<div class="content">
+					<h1>Cultura Vial</h1>
+					<p>En Cultura Vial te brindamos las herramientas para poder tramitar tu licencia de conducir de manera grsatuita, sin necesidad de largas fila</p>
+				</div>
+			</main>
+		</section>
+
+		<!-- EXAMEN -->
+		<section id="page-examen" class="page">
+			<header class="page-header">
+				<span class="page-header__titulo">Examen</span>
+			</header>
+			<main class="page-main">
+				<div class="content">
+					<h3>Como inicar tu prueba?</h3>
+					<p>Antes de realizar te recomendamos leer atentamente la guia que te proporcionamos.
+						<br><br>
+						Una vez dicho esto, aqui te proporcionamos el link para realizar tu prueba, es un formulario de google forms.
+						<br><br>
+						<a href="https://docs.google.com/forms/d/1GcaL6pBrp9QwAVcJckkbUr7xhtNGejSJ2Ts8skqOFlc/prefill" class="link">Abrir el formulario</a>
+					</p>
+				</div>
+			</main>
+		</section>
+
+		<!-- GUIA -->
+		<section id="page-guia" class="page">
+			<button id="btn-abrir-aside" class="active"><i class="fi fi-rs-bars-staggered"></i></button>
+			<div id="background-aside"></div>
+			<aside id="aside" class="aside">
+				<header class="aside-header">
+					<button id="btn-cerrar-aside" class="aside-header__button"><i class="fi fi-rs-cross"></i></button>
+				</header>
+				<div class="aside-body">
+					<ul class="aside-body__lista">
+						<li class="aside-body__li">
+							<a href="#generalidades" class="aside-body__link">I. Generalidades</a>
+							<ul class="aside-body__sub-lista">
+								<li class="aside-body__sub-li"><a href="#generalidades__definiciones" class="aside-body__link">I.1. Definiciones</a></li>
+								<li class="aside-body__sub-li">
+									<a href="#generalidades__de-los-peatones" class="aside-body__link">I.2. De los Peatones</a>
+									<ul class="aside-body__sub-lista">
+										<li class="aside-body__sub-li"><a href="#generalidades__de-los-peatones__de-los-escolares" class="aside-body__link">I.2.1. De los Escolares</a></li>
+									</ul>
+								</li>
+								<li class="aside-body__sub-li"><a href="#generalidades__de-los-vehículos" class="aside-body__link">I.3. De los Vehículos</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<header class="page-header">
+				<span class="page-header__titulo">Guía</span>
+			</header>
+			<main class="page-main">
+				<img class="image" src="./res/img/fondo-inicio-1.jpg" alt="">
+				<div class="content">
+					<h2 id="generalidades">I. Generalidades</h2>
+					<h3 id="generalidades__definiciones">I.1. Definiciones</h3>
+					<p>
+						Para efectos de la presente Guia, se entendera como: <br><br>
+						<b>Automovilista.-</b> El conductor de vehículo destinado para uso particular. <br>
+						<b>Ciclista.-</b> Al conductor de vehículo de tracción humana a pedales. <br>
+						<b>Chofer.-</b> El conductor de vehículo destinado a la explotación del servicio público de transporte, ya sea de pasajeros o de carga. Quedan comprendidos dentro de esta denominación el conductor de
+						vehículo de servicio particular, para transporte de pasajeros o carga, mediante el pago de una
+						retribución económica. <br><br>
+						
+						<h4>Las licencias de chofer se clasifican en:</h4>
+						<b>Chofer A.-</b> Al conductor de tractocamión y camión foráneo de ocho toneladas o más, así como de
+						tres ejes o más, y camión foráneo de pasajeros. <br>
+						<b>Chofer B.-</b> Al conductor de camión urbano de pasajeros y camión de carga de menos de ocho
+						toneladas de dos ejes. <br>
+						<b>Chofer C.-</b> Al conductor de vehículo comercial, camión tipo pick-up, panel cerrada y camión rabón hasta de tres toneladas, y <br>
+						<b>Chofer D.-</b> Al conductor de vehículo de alquiler. <br><br>
+
+						<b>Conductor.-</b> Es la persona encargada de conducir o manejar un vehículo. <br>
+						<b>Menor de Edad.-</b> El conductor de vehículo o motocicleta, respectivamente, distinto a los reservados
+						para choferes, con edad de 16 o 17 años. <br>
+						<b>Motociclista.-</b> El conductor de motocicleta, sea cual fuere la capacidad de los centímetros cúbicos
+						del motor, ya sea para el servicio particular o para el desempeño de un trabajo. <br>
+						<b>Peatón.-</b> Es la persona que transita a pie por la vía pública. <br>
+						<b>Vehículo.-</b> Todo bien mueble identificado en su individualidad, diseñado para el transporte terrestre de personas o cosas en la vía pública, que su movimiento sea generado por una fuerza motriz ya
+						sea por combustión y/o electricidad, así como aquellos destinados para ser remolcados. <br>
+						<b>Vía Pública.-</b> Es todo espacio de uso común destinado al tránsito de peatones y de vehículos. <br>
+						<b>Vialidad.-</b> Cualquier vía rural o urbana por donde transitan los vehículos de un lugar a otro.
+					</p>
+					<h3 id="generalidades__de-los-peatones">I.2. De los Peatones</h3>
+					<p>
+						Los peatones como se ha indicado, son las personas que transitan a pie por la vía pública, éstos cuentan con preferencia de paso con señalamiento en todas las intersecciones. <br><br>
+						A fin de salvaguardar la vida de los peatones, es importante que todo conductor esté alerta
+						de los mismos, y cederles el paso. <br><br>
+						Entre algunas recomendaciones, se citan las siguientes:
+					</p>
+					<ol type="a">
+						<li>Al llegar a los cruceros en donde se encuentren marcadas zonas peatonales los conductores deben detener la marcha del vehículo para ceder el paso a los peatones, inclusive aun cuando el crucero no cuente con las referidas marcas.</li>
+						<li>Cuando se trate de personas discapacitadas, ancianas o menores de 7 años, éstos tienen preferencia sobre cualquier vehículo, por lo que los conductores deben detener su marcha y cederles el paso.</li>
+						<li>Al salir o entrar a un estacionamiento, calle privada o cochera, el conductor debe detener la marcha y permitir el paso de peatones y demás vehículos que transitan.</li>
+						<li>Al observar que otro vehículo cede el paso a un peatón, el conductor debe detener la marcha de su vehículo a fin de tomar las precauciones necesarias.</li>
+					</ol>
+					<h4 id="generalidades__de-los-peatones__de-los-escolares">I.2.1. De los Escolares</h4>
+					<p>
+						Los escolares tienen la preferencia de paso al caminar por las áreas señaladas en las vías públicas para tal efecto. <br><br>
+						Aunado a las áreas para tránsito peatonal, los escolares cuentan con áreas específicas para su ascenso y descenso, por lo que se encuentran obligados a descender o abordar los vehículos en las zonas señaladas para tal fin. En dichas zonas el conductor deberá tomar las precauciones necesarias disminuyendo la velocidad de su vehículo, y en su caso detener la marcha del mismo, a fin de permitir el paso de los escolares.
+					</p>
+					<h3 id="generalidades__de-los-vehículos">I.3. De los Vehículos</h3>
+					<p>
+						La Ley que Regula los Servicios de Control Vehicular en el Estado de Baja California, es el ordenamiento jurídico que regula de manera específica e integral los servicios de control vehicular vigentes en nuestra Entidad, así como los requisitos con los que se debe cumplir para la realización de trámites de registro de vehículos, solicitud de tarjetas y placas de circulación, licencias de conducir, entre otros. <br><br>
+
+						En el artículo 16 de la citada Ley, establece que las placas de circulación se colocarán invariablemente en la parte trasera y delantera de los vehículos, en los lugares destinados para ello, debiendo quedar completamente visibles. <br><br>
+
+						Tratándose de vehículos que por su naturaleza se les expida una sola placa de circulación, ésta se colocará invariablemente en la parte trasera del mismo, debiendo quedar completamente visible. <br><br>
+						Las placas de circulación permiten identificar los vehículos en su individualidad, por lo que las mismas se asignan a un vehículo en particular, debiendo permanecer en éste al momento de su circulación. <br><br>
+
+						Por lo anterior, en ningún momento estará permitido usar o colocar placas de circulación que hayan sido asignadas por la autoridad a otro vehículo, ni alterar o falsificar las mismas. <br><br>
+
+						Por su parte el artículo 17 de la Ley que Regula los Servicios de Control Vehicular en el Estado de Baja California, señala que todo vehículo para que pueda circular en el Estado, debe reunir los siguientes requisitos:
+					</p>
+					<ol type="I">
+						<li>Estar dado de alta ante el Registro Estatal Vehicular, a excepción de los vehículos registrados en otra entidad federativa o bien cuando se trate de vehículos de procedencia extranjera;</li>
+						<li>Portar los elementos de identificación vehicular (calcomanías, placas y tarjetas de circulación) vigentes que deberán coincidir con el vehículo al que correspondan;</li>
+						<li>Reunir las condiciones de seguridad y buen funcionamiento mecánico, para la circulación y seguridad pública;</li>
+						<li>Contar con un seguro de responsabilidad civil, en los términos que la misma Ley establece;</li>
+						<li>Realizar el trámite de verificación vehicular, conforme al Programa de Verificación Vehicular que corresponda, y</li>
+						<li>Cumplir con las disposiciones municipales respectivas que no contravengan lo establecido en esta Ley.</li>
+					</ol>
+					<p>
+						En el caso de vehículos registrados en otra entidad federativa de la República Mexicana podrán circular en el Estado satisfaciendo los requisitos exigidos en el lugar de su procedencia,
+						pero su permanencia por más de tres meses en el Estado, hará obligatoria la observancia de los
+						requisitos exigidos por la referida Ley, de conformidad con el artículo 18 de la misma. <br><br>
+
+						No podrán circular en el Estado vehículos de otras entidades federativas que no cuenten con
+						los elementos de identificación vehicular vigentes. <br><br>
+						Según lo señalado por la Ley de la materia, las citadas medidas también serán aplicables a
+						los vehículos de procedencia extranjera, siempre y cuando sus elementos de identificación vehicular
+						se encuentren vigentes y se reúnan los requisitos que para su legal estancia en el país establecen
+						las disposiciones respectivas.
+					</p>
+				</div>
+			</main>
+		</section>
+	</main>
+	
+	<!-- Script -->
+	<script src="js/index.js"></script>
+	<script src="js/inicio.js"></script>
+	<script src="js/examen.js"></script>
+</body>
+</html>

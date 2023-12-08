@@ -1,0 +1,136 @@
+.slider {
+	height: 100dvh;
+	width: 100vw;
+
+	display: none;
+	grid-template-columns: repeat(3, 1fr);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+
+	overflow-y: hidden;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+
+	background-color: #fff;
+}
+.slider.active {
+	display: grid;
+}
+.slider__screen {
+	height: 100%;
+	width: 100vw;
+	padding: 10px;
+	
+	scroll-snap-align: center;
+	scroll-snap-stop: always;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-blend-mode: hard-light;
+	color: #fff;
+}
+.slider__info {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.slider__info__titulo {
+	margin-bottom: 0;
+	
+	font-size: 45px;
+	text-shadow: 3px 3px rgba(0, 0, 0, 0.17);
+}
+.slider__info__leyenda {
+	font-style: italic;
+	font-size: 18px;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
+}
+.slider__info p {
+	font-size: 18px;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.75);
+}
+
+.slider__link-btn {
+	display: inline-block;
+
+	margin-top: 10dvh;
+	padding: 10px 20px;
+
+	font-size: 16px;
+
+	background-color: rgb(253, 39, 39);
+	color: #fff;
+	text-decoration: none;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
+	cursor: default;
+}
+.slider__link-btn:active {
+	box-shadow: none;
+}
+.slider__flecha-indicadora {
+	font-size: 40px;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.97);
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.slider__container-input {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.slider__checbox {
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+
+	font-size: 14px;
+	background-color: rgb(0, 0, 0);
+	color: #fff;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
+}
+.slider__checbox input {
+	margin-right: 5px;
+	accent-color: #ff3737;
+	width: auto;
+	height: 15px;
+}
+#btn-cerrar-slider {
+	border: 1px solid #000;
+	padding: 10px 20px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 16px;
+	background-color: rgb(0, 0, 0);
+	color: #fff;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.17);
+}
+#btn-cerrar-slider i {
+	margin-left: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+}
